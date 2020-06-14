@@ -50,15 +50,15 @@
         ],
         "exclude": [
           "obj/**",
-          "_site/**"
+          "docs/**"
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "statictoc"
+      "default"
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",

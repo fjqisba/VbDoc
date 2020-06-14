@@ -1,15 +1,27 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/fjqisba/Documents/GitHub/VbDoc/docs",
+  "source_base_path": "C:/Users/fjqisba/Documents/GitHub/VbDoc",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "V1tw8UN8+I5gIku8QQs7Fg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
     {
       "type": "Conceptual",
       "source_relative_path": "about/about.md",
       "output": {
         ".html": {
           "relative_path": "about/about.html",
-          "hash": "2nQE6CddX+km2PsPE1DBdA=="
+          "hash": "T8PTcJV3DuOjlVfnnIrSQw=="
         }
       },
       "is_incremental": false,
@@ -21,7 +33,31 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "FxdgI1brzXeIn7yvBOs6mQ=="
+          "hash": "bLQq8ssyWXjkpdge/z0MlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "H5frWk4fYGIWHpFNp3BdfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "x8AkbkMs8fQeR6DPWVziew=="
         }
       },
       "is_incremental": false,
@@ -33,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/变体类型VARIANT.html",
-          "hash": "LkVvzxpmRJ0HQjNMRbRQAA=="
+          "hash": "aAkDN0216Kg+ybMznGgMkQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +81,19 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "6K+8IjsaPDMPl2JtZZB09A=="
+          "hash": "oexXTAtBW48Dhs/CFYS7Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "yH18vQisCbKwbxtE3Bcl/A=="
         }
       },
       "is_incremental": false,
@@ -64,7 +112,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 4,
+          "total_file_count": 5,
           "skipped_file_count": 4
         },
         "TocDocumentProcessor": {
