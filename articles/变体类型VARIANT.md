@@ -4,7 +4,7 @@ VB中的绝大部分底层函数都会涉及到VARIANT，可以说如果不了�
 
 这里从网上摘一段对VARIANT的介绍:
 
-在VB的基本数据类型中，变体类型(VARIENT)可以表示任何类型的变量 ，而且VARIANT 数据类型具有跨语言的特性。
+在VB的基本数据类型中，变体类型(VARIENT)可以表示任何类型的变量 ，同时VARIANT 数据类型还具有跨语言的特性。
 
 
 
@@ -85,20 +85,20 @@ typedef VARIANT *LPVARIANT;
 
 
 
-在头文件wtypes.h中能找到如下与VARTYPE有关的部分信息
+VARTYPE实际上在源码中只是unsigned short的别名，但在头文件wtypes.h中能找到如下信息
 
 ```c
 enum VARENUM
     {
         VT_EMPTY	= 0,
         VT_NULL	= 1,
-        VT_I2	= 2,
-        VT_I4	= 3,
-        VT_R4	= 4,
-        VT_R8	= 5,
+        VT_I2	= 2,						//相当于C语言中的short
+        VT_I4	= 3,						//相当于C语言中的int
+        VT_R4	= 4,						//相当于C语言中的float
+        VT_R8	= 5,						//相当于C语言中的double
         VT_CY	= 6,
         VT_DATE	= 7,
-        VT_BSTR	= 8,
+        VT_BSTR	= 8,						//字符串
         VT_DISPATCH	= 9,
         VT_ERROR	= 10,
         VT_BOOL	= 11,
@@ -146,10 +146,34 @@ enum VARENUM
 typedef ULONG PROPID;
 ```
 
-枚举类型VARENUM包含非常多的变量类型，其中VARTYPE属于被VARENUM包括在内的。
+VARENUM的全部类型中只有一部分可能会在出现在VARTYPE中，因此VARTYPE< VARENUM。
 
 
 
-了解了这些信息，我们就知道如何去确定变量的值了。
+有时候VARIANT变量的类型并不是唯一的，例如有一个vt为0x8002的VARIANT变量，这时变量类型应该为
 
-//。。。。。。
+VT_RESERVED | VT_I2 = 0x8002，其它情况下同理。
+
+
+
+这里举一个例子，在VB程序中经常遇到一个函数VbaVarTstGt，函数原型为
+
+int  __stdcall  VbaVarTstGt(VARIANTARG* v1 ,VARIANTARG* v2);
+
+此函数用于对比两个VARIANT的大小，当然不同类型的VARIANT也可以比较，因为vb有自身的数据类型转换机制。如果v2大于v1函数返回值为-1，否则函数返回值为0
+
+假设在内存中v1的表示如下:
+
+0018FAB4  04 00 00 00 A9 32 43 76 00 C0 73 44 01 10 00 00
+
+在内存中v2的表示如下:
+
+0018FA60  02 80 00 00 A9 32 43 76 E1 03 73 44 01 10 00 00
+
+
+
+v1的vt为4，变量类型是个float，那么v1的值对应为十六进制浮点数0x4473C000，转换为整数也就是975
+
+v2的vt为0x8002，变量类型是个是个short，那么v2的值对应为0x3E1，用整数表示为993
+
+显然v2 > v1，因此函数返回值为 -1
