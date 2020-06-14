@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#21464;&#20307;&#31867;&#22411;VARIANT </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#21464;&#20307;&#31867;&#22411;VARIANT ">
+    <meta name="generator" content="docfx 2.55.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/%E5%8F%98%E4%BD%93%E7%B1%BB%E5%9E%8BVARIANT.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                      <li>
+                          <a href="../about/about.html" title="About">About</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="active">
+                      <a href="%E5%8F%98%E4%BD%93%E7%B1%BB%E5%9E%8BVARIANT.html" title="&#21464;&#20307;&#31867;&#22411;VARIANT" class="active">&#21464;&#20307;&#31867;&#22411;VARIANT</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="变体类型variant">变体类型VARIANT</h1>
+
+<p>VB中的绝大部分底层函数都会涉及到VARIANT，可以说如果不了解这个变量类型，是无法分析VB程序的。</p>
+<p>这里从网上摘一段对VARIANT的介绍:</p>
+<p>在VB的基本数据类型中，变体类型(VARIENT)可以表示任何类型的变量 ，而且VARIANT 数据类型具有跨语言的特性。</p>
+<p>VARIANT的结构可以参考头文件VC98\Include\OAIDL.H中关于结构体tagVARIANT的定义:</p>
+<pre><code class="lang-c">struct tagVARIANT
+    {
+    union 
+        {
+        struct __tagVARIANT
+            {
+            VARTYPE vt;
+            WORD wReserved1;
+            WORD wReserved2;
+            WORD wReserved3;
+            union 
+                {
+                LONGLONG llVal;
+                LONG lVal;
+                BYTE bVal;
+                SHORT iVal;
+                FLOAT fltVal;
+                DOUBLE dblVal;
+                VARIANT_BOOL boolVal;
+                _VARIANT_BOOL bool;
+                SCODE scode;
+                CY cyVal;
+                DATE date;
+                BSTR bstrVal;
+                IUnknown *punkVal;
+                IDispatch *pdispVal;
+                SAFEARRAY *parray;
+                BYTE *pbVal;
+                SHORT *piVal;
+                LONG *plVal;
+                LONGLONG *pllVal;
+                FLOAT *pfltVal;
+                DOUBLE *pdblVal;
+                VARIANT_BOOL *pboolVal;
+                _VARIANT_BOOL *pbool;
+                SCODE *pscode;
+                CY *pcyVal;
+                DATE *pdate;
+                BSTR *pbstrVal;
+                IUnknown **ppunkVal;
+                IDispatch **ppdispVal;
+                SAFEARRAY **pparray;
+                VARIANT *pvarVal;
+                PVOID byref;
+                CHAR cVal;
+                USHORT uiVal;
+                ULONG ulVal;
+                ULONGLONG ullVal;
+                INT intVal;
+                UINT uintVal;
+                DECIMAL *pdecVal;
+                CHAR *pcVal;
+                USHORT *puiVal;
+                ULONG *pulVal;
+                ULONGLONG *pullVal;
+                INT *pintVal;
+                UINT *puintVal;
+                struct __tagBRECORD
+                    {
+                    PVOID pvRecord;
+                    IRecordInfo *pRecInfo;
+                    } 	__VARIANT_NAME_4;
+                } 	__VARIANT_NAME_3;
+            } 	__VARIANT_NAME_2;
+        DECIMAL decVal;
+        } 	__VARIANT_NAME_1;
+    } ;
+typedef VARIANT *LPVARIANT;
+</code></pre>
+<p>该结构体看起来非常复杂，但关键的值无非是两个，变量类型vt，还有联合结构体中与vt对应的数据类型值。</p>
+<p>在头文件wtypes.h中能找到如下与VARTYPE有关的部分信息</p>
+<pre><code class="lang-c">enum VARENUM
+    {
+        VT_EMPTY	= 0,
+        VT_NULL	= 1,
+        VT_I2	= 2,
+        VT_I4	= 3,
+        VT_R4	= 4,
+        VT_R8	= 5,
+        VT_CY	= 6,
+        VT_DATE	= 7,
+        VT_BSTR	= 8,
+        VT_DISPATCH	= 9,
+        VT_ERROR	= 10,
+        VT_BOOL	= 11,
+        VT_VARIANT	= 12,
+        VT_UNKNOWN	= 13,
+        VT_DECIMAL	= 14,
+        VT_I1	= 16,
+        VT_UI1	= 17,
+        VT_UI2	= 18,
+        VT_UI4	= 19,
+        VT_I8	= 20,
+        VT_UI8	= 21,
+        VT_INT	= 22,
+        VT_UINT	= 23,
+        VT_VOID	= 24,
+        VT_HRESULT	= 25,
+        VT_PTR	= 26,
+        VT_SAFEARRAY	= 27,
+        VT_CARRAY	= 28,
+        VT_USERDEFINED	= 29,
+        VT_LPSTR	= 30,
+        VT_LPWSTR	= 31,
+        VT_RECORD	= 36,
+        VT_INT_PTR	= 37,
+        VT_UINT_PTR	= 38,
+        VT_FILETIME	= 64,
+        VT_BLOB	= 65,
+        VT_STREAM	= 66,
+        VT_STORAGE	= 67,
+        VT_STREAMED_OBJECT	= 68,
+        VT_STORED_OBJECT	= 69,
+        VT_BLOB_OBJECT	= 70,
+        VT_CF	= 71,
+        VT_CLSID	= 72,
+        VT_VERSIONED_STREAM	= 73,
+        VT_BSTR_BLOB	= 0xfff,
+        VT_VECTOR	= 0x1000,
+        VT_ARRAY	= 0x2000,
+        VT_BYREF	= 0x4000,
+        VT_RESERVED	= 0x8000,
+        VT_ILLEGAL	= 0xffff,
+        VT_ILLEGALMASKED	= 0xfff,
+        VT_TYPEMASK	= 0xfff
+    } ;
+typedef ULONG PROPID;
+</code></pre>
+<p>枚举类型VARENUM包含非常多的变量类型，其中VARTYPE属于被VARENUM包括在内的。</p>
+<p>了解了这些信息，我们就知道如何去确定变量的值了。</p>
+<p>//。。。。。。</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
