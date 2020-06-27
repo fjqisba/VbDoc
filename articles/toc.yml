@@ -1,2 +1,4 @@
 - name: 变体类型VARIANT
   href: 变体类型VARIANT.md
+- name: 数据类型BSTR
+  href: 数据类型BSTR.md

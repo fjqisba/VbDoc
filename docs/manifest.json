@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "x8AkbkMs8fQeR6DPWVziew=="
+          "hash": "Uit6Hq64j3E09LuT8LjBuw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/变体类型VARIANT.html",
-          "hash": "YMthOy/vA9EY2axL/R0Y0g=="
+          "hash": "c6jPuTd2QsNFt0rnYBNEbA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/数据类型BSTR.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/数据类型BSTR.html",
+          "hash": "btZgxkyABV10HDG6gopxeg=="
         }
       },
       "is_incremental": false,
@@ -112,8 +124,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 5,
-          "skipped_file_count": 4
+          "total_file_count": 6,
+          "skipped_file_count": 5
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
