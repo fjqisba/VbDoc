@@ -45,10 +45,46 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "H5frWk4fYGIWHpFNp3BdfA=="
+          "hash": "gy8BzQ9JS6YwnJdoNLYHlg=="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/vbaFreeStr.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/vbaFreeStr.html",
+          "hash": "q+GqHifaNqlc32EuH4gOUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/vbaStrCopy.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/vbaStrCopy.html",
+          "hash": "tNomWPpVSGOCITXeYb/0dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/vbaVarCopy.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/vbaVarCopy.html",
+          "hash": "74w5/jvi0fm7EBurRwecCg=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -84,7 +120,7 @@
           "hash": "btZgxkyABV10HDG6gopxeg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -124,8 +160,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 6,
-          "skipped_file_count": 5
+          "total_file_count": 9,
+          "skipped_file_count": 8
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
