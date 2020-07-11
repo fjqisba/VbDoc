@@ -6,4 +6,7 @@
 /**/packages/
 /**/bin/
 /**/obj/
+/about/
+/api/
+/articles/
 _site
