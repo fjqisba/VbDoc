@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "RUE8GxWrm4JqRHlD6IY9GA=="
+          "hash": "ElVXBpFs8c1QoRLpKmm4+w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "about/about.html",
-          "hash": "hv5uIZqgPPJATAoNZ8hcvA=="
+          "hash": "y7d5DqKitwzAmLHvXCYsYg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "YkqmHw8xeL85sc3R4haciw=="
+          "hash": "M5HC9fEI1BmyrhUp6QN/mQ=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "ZUQdPDy/eIQbLEyRsoR/vA=="
+          "hash": "wXOfStDznj/csUH/SolhzQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,19 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaFreeStr.html",
-          "hash": "q+GqHifaNqlc32EuH4gOUQ=="
+          "hash": "ws62Ja6zPwmw4IQcE1JSWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/vbaLenBstr.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/vbaLenBstr.html",
+          "hash": "8L26iWeSLtJcvshasYdVUw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaStrCopy.html",
-          "hash": "tNomWPpVSGOCITXeYb/0dA=="
+          "hash": "mABHofMx0IVa6Tnu4tNK5g=="
         }
       },
       "is_incremental": false,
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaStrI2.html",
-          "hash": "YjEDIfQTZ4B3+5bwAG0jyA=="
+          "hash": "iz3dmi+fAbPnSde/5rf/mQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +105,19 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaStrI4.html",
-          "hash": "S7nxFgI8p9MYiXtLxjSAJw=="
+          "hash": "+6deFdSaJcYx61QFKXRLqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/vbaStrMove.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/vbaStrMove.html",
+          "hash": "c0C4ujg5RMDhyTA4ZMMUuw=="
         }
       },
       "is_incremental": false,
@@ -105,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaVarCopy.html",
-          "hash": "74w5/jvi0fm7EBurRwecCg=="
+          "hash": "9puiTM7/bbhYDqSCxk/a5w=="
         }
       },
       "is_incremental": false,
@@ -129,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/变体类型VARIANT.html",
-          "hash": "c6jPuTd2QsNFt0rnYBNEbA=="
+          "hash": "L5ZiIv8rGBNzA0j0ckkD1g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -141,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/数据类型BSTR.html",
-          "hash": "btZgxkyABV10HDG6gopxeg=="
+          "hash": "7uO+AQks3qRCrtdDAqqvKg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -153,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "VItWjd5EcBa4AekT5G1ohA=="
+          "hash": "j3RZfKojABUfpPTcNWC2uA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -175,19 +199,17 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 11,
-          "skipped_file_count": 0
+          "total_file_count": 13,
+          "skipped_file_count": 11
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -200,8 +222,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
