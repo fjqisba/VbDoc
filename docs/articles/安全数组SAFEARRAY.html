@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#23433;&#20840;&#25968;&#32452;SAFEARRAY </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#23433;&#20840;&#25968;&#32452;SAFEARRAY ">
+    <meta name="generator" content="docfx 2.55.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="安全数组safearray">安全数组SAFEARRAY</h1>
+
+<p>SAFEARRAY也就是安全数组，是COM组件通用数据交互中十分重要的数据结构。</p>
+<p>而VB正是在COM组件基础上设计的语言，因此SAFEARRAY在VB逆向分析中是必须要了解的。</p>
+<p>SAFEARRAY在头文件中有关的结构定义如下:</p>
+<pre><code class="lang-c">typedef struct tagSAFEARRAY
+{
+    USHORT cDims;
+    USHORT fFeatures;
+    ULONG cbElements;
+    ULONG cLocks;
+    PVOID pvData;
+    SAFEARRAYBOUND rgsabound[1];
+} SAFEARRAY;
+</code></pre>
+<p>其中各个成员的描述如下:</p>
+<p>cDims值等于数组的维数。</p>
+<p>fFeatures是用来描述数组如何分配和如何被释放的标志，一般由如下值组合而成:</p>
+<table>
+<thead>
+<tr>
+<th>fFeatures安全数组的标记</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FADF_AUTO 0x0001</td>
+<td>在栈上创建数组</td>
+</tr>
+<tr>
+<td>FADF_STATIC 0x0002</td>
+<td>在堆上创建数组</td>
+</tr>
+<tr>
+<td>FADF_EMBEDDED 0x0004</td>
+<td>在结构中创建</td>
+</tr>
+<tr>
+<td>FADF_FIXEDSIZE 0x0010</td>
+<td>不能改变数组大小</td>
+</tr>
+<tr>
+<td>FADF_RECORD 0x0020</td>
+<td>记录容器</td>
+</tr>
+<tr>
+<td>FADF_HAVEIID 0x0040</td>
+<td>有IID 身份标记 数组</td>
+</tr>
+<tr>
+<td>FADF_HAVEVARTYPE 0x0080</td>
+<td>VT 类型数组</td>
+</tr>
+<tr>
+<td>FADF_BSTR 0x0100</td>
+<td>BSTR数组</td>
+</tr>
+<tr>
+<td>FADF_UNKNOWN 0x0200</td>
+<td>IUnknown指针 数组</td>
+</tr>
+<tr>
+<td>FADF_DISPATCH 0x0400</td>
+<td>IDispatch指针 数组</td>
+</tr>
+<tr>
+<td>FADF_VARIANT 0x0800</td>
+<td>VARIANT 数组</td>
+</tr>
+<tr>
+<td>FADF_RESERVED 0xF0E8</td>
+<td>保留值，将来使用</td>
+</tr>
+</tbody>
+</table>
+<p>cbElements值等于数组中元素占用字节大小。</p>
+<p>cLocks为一个计数器，用来跟踪该数组被锁定的次数。</p>
+<p>pvData为指向数据缓冲区的指针。</p>
+<p>rgsabound用来描述数组每维的数组结构信息，结构信息在头文件结构定义如下:</p>
+<pre><code class="lang-c">typedef struct tagSAFEARRAYBOUND
+{
+    ULONG cElements;		//第N维数组的元素个数
+    LONG lLbound;		//第N维数组的下标(下标从0开始)
+}SAFEARRAYBOUND;
+</code></pre>
+<p>虽然rgsabound在SAFEARRAY中被定义为固定大小数组，但实际上该数组的大小是可变的。</p>
+<hr>
+<p>例如在VB中定义如下代码，然后生成一个EXE</p>
+<pre><code class="lang-vb">Dim test(1) As Integer
+test(0) = 1
+test(1) = 2
+</code></pre>
+<p>数组test将在内存中有如下表现:</p>
+<p>0018FAB0  01 00 92 00 02 00 00 00 00 00 00 00 78 80 52 00</p>
+<p>0018FAC0  02 00 00 00 00 00 00 00</p>
+<p>数组test成员pvData内存表现如下:</p>
+<p>00528078  01 00 02 00</p>
+<p>通过分析内存可以得到如下对应结果:</p>
+<p>该数组为一维数组</p>
+<p>该数组是在堆上创建的、不能改变大小的、存储VT类型元素的数组</p>
+<p>该数组每个成员的大小为两个字节</p>
+<p>该数组未被锁定</p>
+<p>该数组包含两个成员，分别为0x1和0x2。</p>
+<p>再使用IDA分析生成的VB程序，会得到如下的程序代码</p>
+<pre><code class="lang-c"> SAFEARRAY test;
+ _vbaAryConstruct2(&amp;test, ArrayStructdes, 2);
+ test.pvData[0] = 1;
+ test.pvData[1] = 2;
+</code></pre>
+</article>
+          </div>
+          <div class="contribution-panel mobile-hide">
+              <a href="https://github.com/fjqisba/VbDoc/blob/master/articles/&#23433;&#20840;&#25968;&#32452;SAFEARRAY.md/#L1" title="Improve this Doc" class="fab btn-warning pull-right"><i class="glyphicon glyphicon-pencil"></i></a>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

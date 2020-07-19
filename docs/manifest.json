@@ -36,7 +36,7 @@
           "hash": "M5HC9fEI1BmyrhUp6QN/mQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -60,7 +60,7 @@
           "hash": "ws62Ja6zPwmw4IQcE1JSWA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -72,7 +72,7 @@
           "hash": "8L26iWeSLtJcvshasYdVUw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "mABHofMx0IVa6Tnu4tNK5g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "iz3dmi+fAbPnSde/5rf/mQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "+6deFdSaJcYx61QFKXRLqw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "c0C4ujg5RMDhyTA4ZMMUuw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -132,7 +132,7 @@
           "hash": "9puiTM7/bbhYDqSCxk/a5w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "Uit6Hq64j3E09LuT8LjBuw=="
+          "hash": "0jr1Z8P1lPNQnU85HTm8HQ=="
         }
       },
       "is_incremental": false,
@@ -157,6 +157,18 @@
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/安全数组SAFEARRAY.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/安全数组SAFEARRAY.html",
+          "hash": "Q3h45twNrvqGLBdW1BRIDA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "yH18vQisCbKwbxtE3Bcl/A=="
+          "hash": "gsp23qsJdWWpxoUSO6Lnaw=="
         }
       },
       "is_incremental": false,
@@ -208,8 +220,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 13,
-          "skipped_file_count": 11
+          "total_file_count": 14,
+          "skipped_file_count": 13
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
