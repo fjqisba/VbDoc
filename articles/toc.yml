@@ -1,0 +1,8 @@
+- name: VB简要介绍
+  href: VB简要介绍.md
+- name: 安全数组SAFEARRAY
+  href: 安全数组SAFEARRAY.md
+- name: 变体类型VARIANT
+  href: 变体类型VARIANT.md
+- name: 数据类型BSTR
+  href: 数据类型BSTR.md
