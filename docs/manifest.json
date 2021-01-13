@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/fjqisba/Documents/GitHub/VbDoc",
+  "source_base_path": "C:/Users/fjqisba/source/repos/VbDoc",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "ElVXBpFs8c1QoRLpKmm4+w=="
+          "hash": "PJor9TUtOicWNLa5TlElTQ=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "about/about.html",
-          "hash": "y7d5DqKitwzAmLHvXCYsYg=="
+          "hash": "kUa6HEE2OMIEjkMiJWVflg=="
         }
       },
       "is_incremental": true,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "M5HC9fEI1BmyrhUp6QN/mQ=="
+          "hash": "p08d5+8dGVgGogV63PCOnw=="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaFreeStr.html",
-          "hash": "ws62Ja6zPwmw4IQcE1JSWA=="
+          "hash": "J91Nx5kV73NA1KhiUOWjdA=="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaLenBstr.html",
-          "hash": "8L26iWeSLtJcvshasYdVUw=="
+          "hash": "2D0kGR4OcCB+py/VvJiPhA=="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaStrCopy.html",
-          "hash": "mABHofMx0IVa6Tnu4tNK5g=="
+          "hash": "xFwpIunRaIN9oGiCpkXovw=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaStrI2.html",
-          "hash": "iz3dmi+fAbPnSde/5rf/mQ=="
+          "hash": "2LpFLXfbdIpZTdNVrH/Wmw=="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaStrI4.html",
-          "hash": "+6deFdSaJcYx61QFKXRLqw=="
+          "hash": "kSPlc25mQ5pQKC9wvs/7+Q=="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaStrMove.html",
-          "hash": "c0C4ujg5RMDhyTA4ZMMUuw=="
+          "hash": "B0+7ID3ZFk0x92vKPvmFKg=="
         }
       },
       "is_incremental": true,
@@ -129,10 +129,22 @@
       "output": {
         ".html": {
           "relative_path": "api/vbaVarCopy.html",
-          "hash": "9puiTM7/bbhYDqSCxk/a5w=="
+          "hash": "q0UK8m3s4HDi+EIlw5p9FQ=="
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/VB简要介绍.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/VB简要介绍.html",
+          "hash": "x5CiYtRU1TKRcX/rZ178RA=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "0jr1Z8P1lPNQnU85HTm8HQ=="
+          "hash": "DpGqO0xsWi7iquAxTDHD3Q=="
         }
       },
       "is_incremental": false,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/变体类型VARIANT.html",
-          "hash": "L5ZiIv8rGBNzA0j0ckkD1g=="
+          "hash": "30VlBcH6eO51+qCwO7Zc+Q=="
         }
       },
       "is_incremental": true,
@@ -165,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/安全数组SAFEARRAY.html",
-          "hash": "Q3h45twNrvqGLBdW1BRIDA=="
+          "hash": "JDl1CTboJrEuyodS7t5nsg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -177,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/数据类型BSTR.html",
-          "hash": "7uO+AQks3qRCrtdDAqqvKg=="
+          "hash": "LBYDTN1W5pNUnt5cstkiNg=="
         }
       },
       "is_incremental": true,
@@ -189,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "j3RZfKojABUfpPTcNWC2uA=="
+          "hash": "NjxP09A95y4qoGmsuOFvcQ=="
         }
       },
       "is_incremental": true,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "gsp23qsJdWWpxoUSO6Lnaw=="
+          "hash": "OAVNzq1R31yJKOXzT5trDQ=="
         }
       },
       "is_incremental": false,
@@ -220,8 +232,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 14,
-          "skipped_file_count": 13
+          "total_file_count": 15,
+          "skipped_file_count": 14
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
